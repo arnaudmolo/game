@@ -48,7 +48,7 @@
         </div>
 
         <script type="text/template" id="studient-template">
-            <img src="<%= image %>" alt="<%= firstname %>" height="200">
+            <a href="<%= website %>" target="_blank" title="website"><img src="<%= image %>" alt="<%= firstname %>" height="200"></a>
             <span class="toEdit">
                 <h2><%= firstname %></h2>
                 <input class="hide" type="text" name="firstname" value="" placeholder="<%= firstname %>">
