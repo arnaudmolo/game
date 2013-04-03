@@ -24,7 +24,7 @@
             <input type="text" id="suggest" autofocus placeholder="Cherchez moi !" autocomplete="off" />
         </form>
         <a href="#/add" id="add"></a>
-        <section id="studient-list" class="container">
+        <section id="student-list" class="container">
             
         </section>
 
@@ -47,7 +47,7 @@
             </form>
         </div>
 
-        <script type="text/template" id="studient-template">
+        <script type="text/template" id="student-template">
             <a href="<%= website %>" target="_blank" title="website"><img src="<%= image %>" alt="<%= firstname %>" height="200"></a>
             <span class="toEdit">
                 <h2><%= firstname %></h2>
@@ -78,9 +78,9 @@
         <script src="js/vendor/lodash.js"></script>
         <script src="js/vendor/backbone.js"></script>
 
-        <script src="js/view/studientView.js"></script>
-        <script src="js/model/studient.js"></script>
-        <script src="js/collection/promotions.js"></script>
+        <script src="js/view/studentView.js"></script>
+        <script src="js/model/student.js"></script>
+        <script src="js/collection/gallery.js"></script>
         <script src="js/app.js"></script>
 
         <script src="js/router.js"></script>
