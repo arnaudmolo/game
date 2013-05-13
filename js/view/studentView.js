@@ -13,10 +13,6 @@ var hetic = hetic || {};
         },
         template: _.template( $("#student-template").html() ),
         model: hetic.Student,
-        initialize: function(){
-            this.listenTo(this.model, 'change', this.render);
-            this.listenTo(this.model, 'destroy', this.remove);
-        },
         render: function(){
             this.$el.html( this.template (this.model.toJSON()));
             return this;
@@ -31,7 +27,6 @@ var hetic = hetic || {};
         },
         edit: function(e){
             e.currentTarget.classList.add('editing');
-            console.log(e.currentTarget.getElementsByTagName('input'));
             e.currentTarget.getElementsByTagName('input')[0].setAttribute('autofocus');
         },
         updateOnEnter: function(e){
@@ -42,6 +37,10 @@ var hetic = hetic || {};
                 }
                 e.currentTarget.parentElement.classList.remove('editing');
             }
+        },
+        initialize: function(){
+            this.listenTo(this.model, 'change', this.render);
+            this.listenTo(this.model, 'destroy', this.remove);
         }
     });
 }());

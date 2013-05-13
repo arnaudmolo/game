@@ -13,10 +13,12 @@ var hetic = hetic || {};
 			show: 'true',
 			website: ''
 		},
+		view: hetic.StudentView,
 		initialize: function(){
 			this.view = new hetic.StudentView({model: this});
 		},
-		sync: function(){},
+		sync: function(){
+		},
 		hasCapacity: function(search){
 			if (search==='') {
 				this.view.switchClass(true);
